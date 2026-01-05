@@ -61,7 +61,7 @@ export default function HeroSection() {
         {/* Hero Section */}
         <main className="relative">
           {/* Background Image Container */}
-          <div className="relative h-screen min-h-[600px] overflow-hidden">
+          <div className="relative min-h-screen h-auto lg:h-screen lg:min-h-[600px] overflow-hidden flex flex-col">
             {/* Hero Image */}
             <div className="absolute inset-0">
               <Image
@@ -87,6 +87,17 @@ export default function HeroSection() {
                   }}
                 >
                   {/* Main Heading */}
+                  {/* Mobile GIF */}
+                  <div className="block lg:hidden mb-6 flex justify-center w-full">
+                    <Image
+                      src="/home_page/hero.gif"
+                      alt="Hero Animation"
+                      width={500}
+                      height={500}
+                      className="max-w-full h-auto"
+                      unoptimized
+                    />
+                  </div>
                   <h1
                     className="mb-2 md:mb-4 font-semibold"
                     style={{
@@ -127,17 +138,7 @@ export default function HeroSection() {
                       Book a Demo
                     </button>
                   </div>
-                  {/* Mobile GIF */}
-                  <div className="block lg:hidden mt-8 flex justify-center w-full">
-                    <Image
-                      src="/home_page/hero.gif"
-                      alt="Hero Animation"
-                      width={500}
-                      height={500}
-                      className="max-w-full h-auto"
-                      unoptimized
-                    />
-                  </div>
+
                 </div>
                 <div className="flex-1 hidden lg:flex justify-center items-center">
                   <Image
@@ -153,7 +154,7 @@ export default function HeroSection() {
             </div>
 
             {/* Feature Row */}
-            <div className="absolute bottom-5 left-0 right-0 z-10">
+            <div className="relative mt-auto lg:absolute lg:bottom-5 lg:mt-0 left-0 right-0 z-10 pb-8 lg:pb-0">
               <div className="ml-4 md:ml-8 lg:ml-20 xl:ml-28 flex items-center gap-4 md:gap-8">
                 <Image
                   src="/feature_bbc.svg"
