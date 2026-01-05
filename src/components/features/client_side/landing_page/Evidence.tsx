@@ -167,7 +167,7 @@ const Evidence: React.FC = () => {
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-full bg-white rounded-[17.9px] p-8"
+                    className="flex-shrink-0 w-full bg-white p-8"
                     style={{
                       minHeight: "395px",
                     }}

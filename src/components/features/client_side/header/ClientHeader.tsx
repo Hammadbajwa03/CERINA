@@ -49,9 +49,8 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 bg-white/80 rounded-full shadow-lg backdrop-blur-md transition-opacity duration-300 ml-auto ${
-              mounted ? "opacity-100" : "opacity-0 pointer-events-none"
-            }`}
+            className={`lg:hidden p-2 bg-white/80 rounded-full shadow-lg backdrop-blur-md transition-opacity duration-300 ml-auto ${mounted ? "opacity-100" : "opacity-0 pointer-events-none"
+              }`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -69,23 +68,23 @@ export default function Header() {
             >
               About us
             </a>
-              <div className="relative group">
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                  }}
-                  className="flex items-center gap-1 whitespace-nowrap"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                >
-                  Who We Serve
-                  <Image src="/arrow_down.svg" alt="arrow" width={16} height={16} className="w-3 h-3 xl:w-4 xl:h-4" />
-                </a>
+            <div className="relative group">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+                className="flex items-center gap-1 whitespace-nowrap"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Who We Serve
+                <Image src="/arrow_down.svg" alt="arrow" width={16} height={16} className="w-3 h-3 xl:w-4 xl:h-4" />
+              </a>
 
-                {/* Dropdown - appears on hover */}
-                <div className="pointer-events-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 min-w-[280px] bg-white rounded-lg shadow-lg z-50">
-                  <div className="py-2">
+              {/* Dropdown - appears on hover */}
+              <div className="pointer-events-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-150 absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[280px] z-50">
+                <div className="py-2 bg-white rounded-lg shadow-lg">
                   {whoWeServe.map((item) => (
                     <a
                       key={item.id}
@@ -105,9 +104,9 @@ export default function Header() {
                       {item.label}
                     </a>
                   ))}
-                  </div>
                 </div>
               </div>
+            </div>
             <div className="relative group">
               <a
                 href="#"
@@ -123,8 +122,8 @@ export default function Header() {
               </a>
 
               {/* Dropdown - appears on hover */}
-              <div className="pointer-events-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-150 absolute top-full left-1/2 -translate-x-1/2 mt-3 min-w-[160px] bg-white rounded-lg shadow-lg z-50">
-                <div className="py-2">
+              <div className="pointer-events-none opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-150 absolute top-full left-1/2 -translate-x-1/2 pt-3 min-w-[160px] z-50">
+                <div className="py-2 bg-white rounded-lg shadow-lg">
                   {products.map((item) => (
                     <a
                       key={item.id}
@@ -153,7 +152,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="whitespace-nowrap hover:text-gray-950 transition-colors"
             >
-             Research
+              Research
             </a>
 
             <a href="https://blog.cerinahealth.com/" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap hover:text-gray-950 transition-colors">Blog</a>

@@ -3,6 +3,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 type VideoCardProps = {
   name: string;
   role: string;
@@ -50,7 +52,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
           alt="Video thumbnail"
           fill
           style={{
-            objectFit: 'contain',
+            objectFit: 'cover',
             borderRadius: "13.79px",
           }}
           onError={() => {
@@ -417,6 +419,14 @@ const VideoTestimonials: React.FC = () => {
     setSelectedVideo(null);
   };
 
+  const handlePrev = () => {
+    setActiveIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => Math.min(videos.length - 1, prev + 1));
+  };
+
   return (
     <div className="w-full bg-white py-16 px-4">
       <div className="max-w-[1240px] mx-auto">
@@ -454,38 +464,60 @@ const VideoTestimonials: React.FC = () => {
         </p>
 
         {/* Video Carousel */}
-        <div 
-          className={`relative overflow-hidden ${activeIndex > 0 ? 'before:hidden sm:before:block before:absolute before:inset-y-0 before:left-0 before:w-[10%] before:bg-gradient-to-r before:from-white/70 before:to-transparent before:pointer-events-none before:z-10' : ''} ${activeIndex < videos.length - 1 ? 'after:hidden sm:after:block after:absolute after:inset-y-0 after:right-0 after:w-[10%] after:bg-gradient-to-l after:from-white/70 after:to-transparent after:pointer-events-none after:z-10' : ''}`}
-        >
-          <div
-            ref={carouselRef}
-            className="flex gap-0 sm:gap-6 transition-transform duration-300 ease-out select-none"
-            style={{
-              transform: getTransform(),
-              cursor: isDragging ? "grabbing" : "grab",
-            }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            onWheel={handleWheel}
+        <div className="relative px-0 sm:px-16">
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            disabled={activeIndex === 0}
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg disabled:opacity-0 disabled:pointer-events-none transition-all duration-300 hover:bg-gray-50 text-[#121212] border border-[#d1d1d1]"
+            aria-label="Previous video"
           >
-            {videos.map((video, index) => (
-              <VideoCard
-                key={index}
-                ref={index === 0 ? cardRef : undefined}
-                name={video.name}
-                role={video.role}
-                videoUrl={video.videoUrl}
-                thumbnailUrl={video.thumbnailUrl}
-                isCenter={index === activeIndex}
-                opacity={getOpacity(index)}
-                onPlay={() => handleVideoPlay(video)}
-              />
-            ))}
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            disabled={activeIndex === videos.length - 1}
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg disabled:opacity-0 disabled:pointer-events-none transition-all duration-300 hover:bg-gray-50 text-[#121212] border border-[#d1d1d1]"
+            aria-label="Next video"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          <div
+            className={`relative overflow-hidden ${activeIndex > 0 ? 'before:hidden sm:before:block before:absolute before:inset-y-0 before:left-0 before:w-[10%] before:bg-gradient-to-r before:from-white/70 before:to-transparent before:pointer-events-none before:z-10' : ''} ${activeIndex < videos.length - 1 ? 'after:hidden sm:after:block after:absolute after:inset-y-0 after:right-0 after:w-[10%] after:bg-gradient-to-l after:from-white/70 after:to-transparent after:pointer-events-none after:z-10' : ''}`}
+          >
+            <div
+              ref={carouselRef}
+              className="flex gap-0 sm:gap-6 transition-transform duration-300 ease-out select-none"
+              style={{
+                transform: getTransform(),
+                cursor: isDragging ? "grabbing" : "grab",
+              }}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onWheel={handleWheel}
+            >
+              {videos.map((video, index) => (
+                <VideoCard
+                  key={index}
+                  ref={index === 0 ? cardRef : undefined}
+                  name={video.name}
+                  role={video.role}
+                  videoUrl={video.videoUrl}
+                  thumbnailUrl={video.thumbnailUrl}
+                  isCenter={index === activeIndex}
+                  opacity={getOpacity(index)}
+                  onPlay={() => handleVideoPlay(video)}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
