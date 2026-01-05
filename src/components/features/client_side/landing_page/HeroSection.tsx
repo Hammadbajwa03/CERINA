@@ -88,7 +88,7 @@ export default function HeroSection() {
                 >
                   {/* Main Heading */}
                   {/* Mobile GIF */}
-                  <div className="block lg:hidden mb-6 flex justify-center w-full">
+                  <div className="block lg:hidden mt-20 mb-6 flex justify-center w-full">
                     <Image
                       src="/home_page/hero.gif"
                       alt="Hero Animation"
