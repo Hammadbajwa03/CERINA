@@ -15,6 +15,7 @@ type FeatureSectionProps = {
   imagePosition?: "left" | "right";
   backgroundColorClass?: string;
   showStoreButtons?: boolean;
+  href?: string;
 };
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
@@ -29,6 +30,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   imagePosition,
   backgroundColorClass,
   showStoreButtons,
+  href,
 }) => {
   const hasContent = title || subtitle || secondTitle || description;
 
@@ -38,9 +40,8 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     >
       <div className="w-full max-w-[1240px] mx-auto px-4 py-16">
         <div
-          className={`flex flex-col ${
-            imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse"
-          } flex-col-reverse items-center justify-between gap-12 lg:gap-16`}
+          className={`flex flex-col ${imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse"
+            } flex-col-reverse items-center justify-between gap-12 lg:gap-16`}
         >
           {/* Text Content */}
           {hasContent && (
@@ -107,24 +108,48 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               )}
 
               {buttonText && (
-                <button
-                  className="group mt-11 w-[223px] hover:w-[280px] h-[54px] px-[32px] py-[16px] rounded-[16px] bg-[#D4C7E5] border-2 border-[#D4C7E3] text-[#18161A] font-medium hover:bg-[#D4C7E5]/90 transition-all duration-200 text-center cursor-pointer overflow-hidden"
-                  style={{
-                    fontSize: "clamp(0.9rem, 2.25vw, 1.125rem)",
-                    lineHeight: "clamp(0.9rem, 2.25vw, 1.125rem)",
-                    letterSpacing: "-0.144px",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  <span className="inline-flex items-center justify-center">
-                    <span>{buttonText}</span>
-                    <span className="ml-2 inline-block transform transition-all duration-200 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-1">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 3L13 8L8 13M13 8H3" stroke="#18161A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                href ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group mt-11 inline-block w-[223px] hover:w-[280px] h-[54px] px-[32px] py-[16px] rounded-[16px] bg-[#D4C7E5] border-2 border-[#D4C7E3] text-[#18161A] font-medium hover:bg-[#D4C7E5]/90 transition-all duration-200 text-center cursor-pointer overflow-hidden"
+                    style={{
+                      fontSize: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                      lineHeight: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                      letterSpacing: "-0.144px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    <span className="inline-flex items-center justify-center w-full h-full">
+                      <span>{buttonText}</span>
+                      <span className="ml-2 inline-block transform transition-all duration-200 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-1">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 3L13 8L8 13M13 8H3" stroke="#18161A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </a>
+                ) : (
+                  <button
+                    className="group mt-11 w-[223px] hover:w-[280px] h-[54px] px-[32px] py-[16px] rounded-[16px] bg-[#D4C7E5] border-2 border-[#D4C7E3] text-[#18161A] font-medium hover:bg-[#D4C7E5]/90 transition-all duration-200 text-center cursor-pointer overflow-hidden"
+                    style={{
+                      fontSize: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                      lineHeight: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                      letterSpacing: "-0.144px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    <span className="inline-flex items-center justify-center">
+                      <span>{buttonText}</span>
+                      <span className="ml-2 inline-block transform transition-all duration-200 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-1">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 3L13 8L8 13M13 8H3" stroke="#18161A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </span>
+                  </button>
+                )
               )}
 
               {showStoreButtons && (

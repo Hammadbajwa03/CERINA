@@ -48,25 +48,27 @@ const DeliverNHS: React.FC = () => {
               Cerina currently powers the digital mental health solution supporting the WorkWell programme for NHS Cornwall & Isles of Scilly, helping users access self-guided care quickly while acting as a digital front door that recruits referrals to WorkWell coaches.
             </p>
 
-            <button
-              className="group mb-8 w-[223px] hover:w-[280px] h-[54px] px-[32px] py-[16px] rounded-[16px] text-white font-medium hover:bg-[#005EB8]/90 transition-all duration-200 text-center cursor-pointer overflow-hidden"
-              style={{
-                backgroundColor: "#005EB8",
-                fontSize: "clamp(0.9rem, 2.25vw, 1.125rem)",
-                lineHeight: "clamp(0.9rem, 2.25vw, 1.125rem)",
-                letterSpacing: "-0.144px",
-                whiteSpace: "nowrap",
-              }}
-            >
-              <span className="inline-flex items-center justify-center">
-                <span>Learn more</span>
-                <span className="ml-2 inline-block transform transition-all duration-200 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-1">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 3L13 8L8 13M13 8H3" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+            <a href="https://cerinahealth.com/organisations" target="_blank" rel="noopener noreferrer">
+              <button
+                className="group mb-8 w-[223px] hover:w-[280px] h-[54px] px-[32px] py-[16px] rounded-[16px] text-white font-medium hover:bg-[#005EB8]/90 transition-all duration-200 text-center cursor-pointer overflow-hidden"
+                style={{
+                  backgroundColor: "#005EB8",
+                  fontSize: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                  lineHeight: "clamp(0.9rem, 2.25vw, 1.125rem)",
+                  letterSpacing: "-0.144px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <span className="inline-flex items-center justify-center">
+                  <span>Learn more</span>
+                  <span className="ml-2 inline-block transform transition-all duration-200 opacity-0 translate-x-0 group-hover:opacity-100 group-hover:translate-x-1">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 3L13 8L8 13M13 8H3" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </a>
 
             {/* Quotes Section */}
             <div
@@ -82,8 +84,8 @@ const DeliverNHS: React.FC = () => {
                   <div
                     key={index}
                     className={`transition-all duration-500 ${index === activeQuote
-                        ? "opacity-100 max-h-96"
-                        : "opacity-0 max-h-0 overflow-hidden"
+                      ? "opacity-100 max-h-96"
+                      : "opacity-0 max-h-0 overflow-hidden"
                       }`}
                   >
                     <p
@@ -155,8 +157,8 @@ const DeliverNHS: React.FC = () => {
                       key={index}
                       onClick={() => setActiveQuote(index)}
                       className={`w-3 rounded-lg transition-all duration-300 cursor-pointer ${index === activeQuote
-                          ? "bg-[#005EB8]"
-                          : "bg-[#005EB866]"
+                        ? "bg-[#005EB8]"
+                        : "bg-[#005EB866]"
                         }`}
                       style={{ height: `${height}px` }}
                     />

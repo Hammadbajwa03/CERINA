@@ -25,6 +25,7 @@ export default function HomePage() {
           buttonText="Business Solution"
           media="home_page/services_icon.svg"
           imagePosition="right"
+          href="https://cerinahealth.com/organisations"
         />
       </section>
 
@@ -37,6 +38,7 @@ export default function HomePage() {
           media="/home_page/individuals.svg"
           imagePosition="left"
           showStoreButtons={true}
+          href="https://cerinahealth.com/app"
         />
       </section>
 
@@ -44,16 +46,16 @@ export default function HomePage() {
 
 
 
-      <NhsSolutions/>
+      <NhsSolutions />
 
-      <DeliverNHS/>
+      <DeliverNHS />
 
-      <Evidence/>
+      <Evidence />
 
-      <CaseResearch/>
+      <CaseResearch />
 
-      
-      <VideoTestimonials/>
+
+      <VideoTestimonials />
 
       <FaqSection />
 
