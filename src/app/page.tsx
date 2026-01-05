@@ -55,9 +55,13 @@ export default function HomePage() {
       <CaseResearch />
 
 
-      <VideoTestimonials />
+      <section id="testimonials">
+        <VideoTestimonials />
+      </section>
 
-      <FaqSection />
+      <section id="faq">
+        <FaqSection />
+      </section>
 
     </>
   );

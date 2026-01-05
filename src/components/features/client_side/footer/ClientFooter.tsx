@@ -191,10 +191,10 @@ export default function Footer() {
                     <a href="https://blog.cerinahealth.com/">Blogs</a>
                   </li>
                   <li>
-                    <Link href="/testimonials">Testimonials</Link>
+                    <Link href="/#testimonials">Testimonials</Link>
                   </li>
                   <li>
-                    <Link href="/faq">FAQ</Link>
+                    <Link href="/#faq">FAQ</Link>
                   </li>
                 </ul>
               </div>
