@@ -48,7 +48,7 @@ export default function HeroSection() {
       animationId = requestAnimationFrame(animate);
     };
 
-  animate();
+    animate();
 
     return () => {
       if (animationId) cancelAnimationFrame(animationId);
@@ -82,7 +82,7 @@ export default function HeroSection() {
                   className="flex-1 pt-6 pr-6 pb-12 md:pt-8 md:pr-8 md:pb-16 lg:pt-10 lg:pr-10 lg:pb-20 max-w-[634px] pl-0"
                   style={{
                     borderColor: "#D4D4D4",
-                   
+
                     maxHeight: "348px",
                   }}
                 >
@@ -96,8 +96,8 @@ export default function HeroSection() {
                       letterSpacing: "0%",
                     }}
                   >
-                   Digital mental health, customised to your service and the communities you support.
-                    
+                    Digital mental health, customised to your service and the communities you support.
+
                   </h1>
 
                   {/* Subtitle */}
@@ -109,7 +109,7 @@ export default function HeroSection() {
                       letterSpacing: "0%",
                     }}
                   >
-                   Clinically grounded support, guided programmes and AI-powered tools - all in one safe, accessible and easy to navigate platform.
+                    Clinically grounded support, guided programmes and AI-powered tools - all in one safe, accessible and easy to navigate platform.
                   </p>
 
                   {/* Book a Demo CTA */}
@@ -126,6 +126,17 @@ export default function HeroSection() {
                     >
                       Book a Demo
                     </button>
+                  </div>
+                  {/* Mobile GIF */}
+                  <div className="block lg:hidden mt-8 flex justify-center w-full">
+                    <Image
+                      src="/home_page/hero.gif"
+                      alt="Hero Animation"
+                      width={500}
+                      height={500}
+                      className="max-w-full h-auto"
+                      unoptimized
+                    />
                   </div>
                 </div>
                 <div className="flex-1 hidden lg:flex justify-center items-center">
