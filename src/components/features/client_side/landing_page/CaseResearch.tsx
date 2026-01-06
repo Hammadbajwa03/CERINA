@@ -72,6 +72,7 @@ const InfoCard: React.FC<CardProps> = ({
               alt="card visual"
               width={600}
               height={260}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="w-full h-[200px] md:h-[260px] mt-6 object-cover rounded-b-[14.53px] transition-transform duration-300 group-hover:scale-105"
             />
           ) : null}

@@ -185,6 +185,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               alt={title || "Feature image"}
               width={600}
               height={600}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className={
                 hasContent
                   ? "w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] 2xl:max-w-[600px]"
