@@ -158,10 +158,10 @@ export default function Footer() {
                     <a href="https://cerinahealth.com/how-it-works">How it Works</a>
                   </li>
                   <li>
-                    <Link href="/business-solution">Business Solutions</Link>
+                    <a href="https://cerinahealth.com/organisations" target="_blank" rel="noopener noreferrer">Business Solutions</a>
                   </li>
                   <li>
-                    <Link href="/individual-solution">Individual Solutions</Link>
+                    <a href="https://cerinahealth.com/app" target="_blank" rel="noopener noreferrer">Individual Solutions</a>
                   </li>
                 </ul>
               </div>
