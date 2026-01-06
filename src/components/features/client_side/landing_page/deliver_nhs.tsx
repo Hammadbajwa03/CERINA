@@ -186,6 +186,7 @@ const DeliverNHS: React.FC = () => {
               alt="Deliver NHS"
               width={600}
               height={600}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[550px] 2xl:max-w-[600px]"
             />
           </div>

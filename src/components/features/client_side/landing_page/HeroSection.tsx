@@ -68,6 +68,7 @@ export default function HeroSection() {
                 src="/sky.svg"
                 alt="Happy couple on beach"
                 fill
+                sizes="100vw"
                 className="object-cover object-center"
                 priority
               />
@@ -94,6 +95,7 @@ export default function HeroSection() {
                       alt="Hero Animation"
                       width={500}
                       height={500}
+                      sizes="100vw"
                       className="max-w-full h-auto"
                       unoptimized
                     />
@@ -146,6 +148,7 @@ export default function HeroSection() {
                     alt="Hero Image"
                     width={500}
                     height={500}
+                    sizes="(max-width: 1024px) 100vw, 500px"
                     className="max-w-full h-auto"
                     unoptimized
                   />

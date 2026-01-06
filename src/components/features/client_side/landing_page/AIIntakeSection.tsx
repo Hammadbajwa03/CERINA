@@ -13,6 +13,7 @@ const AIIntakeSection = () => {
             alt="AI Intake Animation"
             width={350}
             height={650}
+            sizes="(max-width: 1024px) 100vw, 350px"
             className="w-full h-full object-contain"
             unoptimized
           />
@@ -61,6 +62,7 @@ const AIIntakeSection = () => {
               alt="AI Intake Animation"
               width={220}
               height={400}
+              sizes="100vw"
               className="w-full h-full object-contain"
               unoptimized
             />
