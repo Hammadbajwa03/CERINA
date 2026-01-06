@@ -35,7 +35,7 @@ export default function HomePage() {
           secondTitle="Individuals"
           description="We meet you where you are. Take the small steps to access secure, stigma-free mental health tools, with self-guided Cognitive Behavioural Therapy (CBT) sessions, clinically-safe AI chatbot available 24/7, and many more self-care exercises to support your mental health journey."
           buttonText="Individual Solution"
-          media="/home_page/individuals.svg"
+          media="/home_page/Subtract.png"
           imagePosition="left"
           showStoreButtons={true}
           href="https://cerinahealth.com/app"
