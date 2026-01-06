@@ -51,7 +51,6 @@ const VideoCard: React.FC<VideoCardProps> = ({
           src={thumbnailSrc}
           alt="Video thumbnail"
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           style={{
             objectFit: 'cover',
             borderRadius: "13.79px",
