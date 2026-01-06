@@ -143,15 +143,7 @@ export default function HeroSection() {
 
                 </div>
                 <div className="flex-1 hidden lg:flex justify-center items-center">
-                  <Image
-                    src="/home_page/hero.gif"
-                    alt="Hero Image"
-                    width={500}
-                    height={500}
-                    sizes="(max-width: 1024px) 100vw, 500px"
-                    className="max-w-full h-auto"
-                    unoptimized
-                  />
+                  {/* Desktop GIF removed as per requirement */}
                 </div>
               </div>
             </div>
