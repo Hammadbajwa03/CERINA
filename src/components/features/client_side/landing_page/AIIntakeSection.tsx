@@ -6,10 +6,19 @@ const AIIntakeSection = () => {
   return (
     <div className="relative w-full py-6 md:py-9 lg:py-16 px-3 md:px-6 lg:px-12 overflow-hidden mb-12">
       {/* GIF positioned absolutely to float above the background on desktop */}
-      {/* GIF positioned absolutely to float above the background on desktop - REMOVED */}
-      {/* <div className="hidden lg:flex absolute inset-0 justify-center items-center pointer-events-none z-10">
-        ...
-      </div> */}
+      <div className="hidden lg:flex absolute inset-0 justify-center items-center pointer-events-none z-10">
+        <div className="relative w-[350px] h-[650px] flex items-center justify-center">
+          <Image
+            src="/home_page/section4-anim.gif"
+            alt="AI Intake Animation"
+            width={350}
+            height={650}
+            sizes="(max-width: 1024px) 100vw, 350px"
+            className="w-full h-full object-contain"
+            unoptimized
+          />
+        </div>
+      </div>
 
       {/* Background with text sections */}
       <div className="relative z-0 w-full max-w-6xl mx-auto bg-[#F5EFE7] rounded-3xl px-5 md:px-10 lg:px-14 pt-3 pb-3 md:pt-5 md:pb-5 lg:pt-16 lg:pb-16 flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-100">
