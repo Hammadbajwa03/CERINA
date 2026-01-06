@@ -182,7 +182,7 @@ export default function Footer() {
                   style={{ fontFamily: "Montserrat" }}
                 >
                   <li>
-                    <Link href="/case-studies">Case Studies</Link>
+                    <a href="https://blog.cerinahealth.com/">Case Studies</a>
                   </li>
                   <li>
                     <a href="https://cerinahealth.com/research">Research</a>
